@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gizli İtalya Kaçamağımız - Yerel Fotoğraflar</title>
+<link href="https://images.unsplash.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --ink:#16202a; --muted:#6f7c88; --cream:#fff8ef; --sand:#f2dfc8; --sea:#0a7c8f; --deep:#064653;
+      --coral:#f47e63; --lemon:#ffd166; --rose:#ffddd2; --glass:rgba(255,255,255,.72); --shadow:0 24px 80px rgba(18,32,42,.18);
+      --radius:28px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#fff8ef 0%,#fff2e1 38%,#eaf8f9 100%);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 10%,rgba(255,209,102,.28),transparent 28%),radial-gradient(circle at 88% 18%,rgba(244,126,99,.22),transparent 30%),radial-gradient(circle at 70% 82%,rgba(10,124,143,.18),transparent 35%);z-index:-2}
+    .grain{position:fixed;inset:0;opacity:.08;pointer-events:none;z-index:999;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" stitchTiles="stitch"/></filter><rect width="160" height="160" filter="url(%23n)" opacity="0.6"/></svg>')}
+    .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:20;width:min(1120px,calc(100% - 28px));padding:12px 14px;background:rgba(255,255,255,.68);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.82);border-radius:999px;box-shadow:0 10px 36px rgba(6,70,83,.12);display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:900;letter-spacing:-.04em}.brand span{color:var(--coral)}.nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:800;padding:10px 13px;border-radius:999px}.nav a:hover{background:rgba(10,124,143,.1)}
+    .hero{min-height:100vh;display:grid;place-items:center;padding:112px 20px 60px;position:relative}.hero-grid{width:min(1180px,100%);display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}.eyebrow{display:inline-flex;gap:10px;align-items:center;padding:8px 14px;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:999px;color:var(--deep);font-weight:900;box-shadow:0 10px 30px rgba(6,70,83,.08)}h1{font-family:'Playfair Display',serif;font-size:clamp(48px,8vw,116px);line-height:.88;margin:18px 0;letter-spacing:-.06em}h1 .script{color:var(--sea);font-style:italic}.lead{font-size:clamp(17px,2.2vw,23px);line-height:1.55;color:#43505b;max-width:650px}.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border:0;border-radius:999px;padding:15px 22px;font-weight:900;cursor:pointer;box-shadow:0 15px 34px rgba(6,70,83,.18);transition:.25s}.btn.primary{background:var(--ink);color:white}.btn.secondary{background:white;color:var(--deep);border:1px solid rgba(6,70,83,.1)}.btn:hover{transform:translateY(-3px)}
+    .polaroids{position:relative;min-height:640px}.photo{position:absolute;border:12px solid white;border-bottom-width:42px;border-radius:24px;background:white;box-shadow:var(--shadow);overflow:hidden;transition:.35s}.photo:hover{transform:rotate(0deg) scale(1.03)!important;z-index:5}.photo img{width:100%;height:100%;object-fit:cover;display:block}.p1{width:58%;height:350px;right:10%;top:20px;transform:rotate(4deg)}.p2{width:48%;height:280px;left:2%;top:190px;transform:rotate(-7deg)}.p3{width:52%;height:300px;right:2%;bottom:20px;transform:rotate(7deg)}.sticker{position:absolute;background:var(--lemon);border-radius:999px;padding:18px 22px;font-weight:900;box-shadow:0 14px 30px rgba(18,32,42,.16);right:24%;top:412px;transform:rotate(-8deg);z-index:7}.sticker small{display:block;color:#9d5c00}
+    section{padding:90px 20px}.wrap{width:min(1180px,100%);margin:auto}.section-title{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,72px);line-height:.96;letter-spacing:-.045em;margin:0 0 18px}.section-kicker{color:var(--coral);font-weight:900;text-transform:uppercase;letter-spacing:.15em;font-size:12px}.two-choice{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}.choice{position:relative;min-height:520px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);isolation:isolate;background:#000}.choice:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.24) 38%,rgba(0,0,0,.76) 100%);z-index:1}.choice img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.8s}.choice:hover img{transform:scale(1.08)}.choice-content{position:absolute;z-index:2;left:28px;right:28px;bottom:28px;color:white}.choice h3{font-family:'Playfair Display',serif;font-size:52px;line-height:.9;margin:10px 0}.pillrow{display:flex;flex-wrap:wrap;gap:9px}.pill{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.24);backdrop-filter:blur(8px);font-weight:800;font-size:13px}.price{font-size:30px;font-weight:900;color:var(--lemon);margin:16px 0 4px}.rating{display:inline-flex;background:white;color:var(--ink);padding:9px 12px;border-radius:999px;font-weight:900}
+    .comparison{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}.stat{background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:22px;padding:22px;box-shadow:0 12px 36px rgba(6,70,83,.08)}.stat b{display:block;font-size:27px;margin-bottom:7px}.stat span{color:var(--muted);font-weight:700}.trip{margin-top:54px;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.88);border-radius:36px;box-shadow:var(--shadow);overflow:hidden}.trip-hero{display:grid;grid-template-columns:.92fr 1.08fr;gap:0}.trip-cover{min-height:480px;position:relative;overflow:hidden}.trip-cover img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.trip-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45))}.trip-copy{padding:44px}.trip-copy h2{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,78px);line-height:.9;letter-spacing:-.05em;margin:12px 0}.trip-copy p{line-height:1.7;color:#4d5a63}.budget-card{margin-top:22px;border-radius:26px;background:linear-gradient(135deg,#16202a,#064653);color:white;padding:24px;box-shadow:0 20px 40px rgba(6,70,83,.22)}.budget-card h4{margin:0 0 13px;font-size:20px}.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.budget-line{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.24);font-weight:700}.budget-total{display:flex;justify-content:space-between;gap:16px;margin-top:16px;font-size:24px;font-weight:900;color:var(--lemon)}.note{font-size:13px;color:rgba(255,255,255,.72);line-height:1.5;margin-top:12px}.timeline{padding:38px;display:grid;gap:18px}.day{display:grid;grid-template-columns:150px minmax(0,1fr) 240px;gap:18px;background:rgba(255,255,255,.78);border:1px solid rgba(6,70,83,.08);border-radius:26px;padding:18px;box-shadow:0 12px 30px rgba(6,70,83,.06);align-items:stretch}.day-photo{min-height:190px;border-radius:22px;overflow:hidden;box-shadow:0 12px 30px rgba(18,32,42,.13);position:relative}.day-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}.day:hover .day-photo img{transform:scale(1.06)}.day-num{background:var(--rose);border-radius:20px;padding:18px;text-align:center;font-weight:900;color:#713525}.day-num strong{display:block;font-family:'Playfair Display',serif;font-size:42px;line-height:.8}.day h4{margin:0 0 7px;font-size:22px}.day p{margin:0;color:#51606b;line-height:1.6}.mini-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.mini{font-size:12px;font-weight:900;color:var(--deep);background:#e7f8fb;border-radius:999px;padding:7px 10px}.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px;margin-top:28px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:24px;box-shadow:0 12px 30px rgba(18,32,42,.13)}.gallery img:first-child{height:454px;grid-row:span 2}.decision{background:linear-gradient(135deg,#fff,#fff4df);border-radius:36px;padding:38px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 1fr;gap:24px}.winner{border:1px solid rgba(6,70,83,.08);border-radius:28px;padding:24px;background:rgba(255,255,255,.78)}.winner h3{font-family:'Playfair Display',serif;font-size:40px;margin:0 0 10px}.footer{padding:60px 20px;text-align:center;color:#5c6a74}.heart{font-size:42px;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.12)}}
+    .reveal{position:fixed;inset:0;background:linear-gradient(135deg,#16202a,#064653);z-index:100;display:grid;place-items:center;text-align:center;color:white;padding:24px;transition:.7s}.reveal.hide{opacity:0;pointer-events:none}.reveal h2{font-family:'Playfair Display',serif;font-size:clamp(46px,8vw,96px);line-height:.9;margin:0 0 18px}.reveal p{font-size:20px;color:rgba(255,255,255,.78);max-width:720px}.reveal .btn{background:white;color:var(--ink);margin-top:20px}.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}.confetti i{position:absolute;width:10px;height:18px;background:var(--lemon);top:-40px;animation:fall linear infinite}.confetti i:nth-child(2n){background:var(--coral)}.confetti i:nth-child(3n){background:#8bd3dd}@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+    @media(max-width:900px){.hero-grid,.two-choice,.trip-hero,.decision{grid-template-columns:1fr}.polaroids{min-height:520px}.comparison{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{grid-column:span 2}.nav{gap:6px}.nav a{font-size:12px;padding:8px 9px}.trip-copy{padding:30px}.timeline{padding:22px}.day{grid-template-columns:1fr}.day-photo{min-height:230px}.budget-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){.comparison{grid-template-columns:1fr}.gallery,.gallery img:first-child{display:block}.gallery img{margin-bottom:12px}.photo{border-width:8px;border-bottom-width:32px}.p1{width:80%;right:0}.p2{width:70%;top:210px}.p3{width:74%;bottom:0}.sticker{right:5%;top:380px}.choice h3{font-size:42px}}
+  </style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="reveal" id="reveal">
+<div class="confetti" id="confetti"></div>
+<div>
+<div class="heart">💛</div>
+<h2>Bize minicik bir İtalya yaz kaçamağı planladım.</h2>
+<p>Üç gece. Dört gün. Deniz, gün batımları, plajlar, tekne keyfi ve kişi başı yaklaşık €450–€500 civarında kalan bir bütçe.</p>
+<button class="btn" onclick="document.getElementById('reveal').classList.add('hide')">Sürprizi aç</button>
+</div>
+</div>
+<nav class="nav">
+<div class="brand">İtalya <span>bizim için</span></div>
+<div>
+<a href="#options">Seçenekler</a><a href="#ischia">Ischia</a><a href="#sicily">Doğu Sicilya</a><a href="#choose">Karar</a>
+</div>
+</nav>
+<header class="hero">
+<div class="hero-grid">
+<div>
+<div class="eyebrow">☀️ 3 gece / 4 gün · yaz · Puglia yok</div>
+<h1>Kaçmak için iki farklı <span class="script">İtalya</span></h1>
+<p class="lead">Sürpriz bir çift seyahati için küçük ama havalı bir karar sitesi: A seçeneği Ischia’da ada tatili. B seçeneği Doğu Sicilya’da romantik bir deniz ve tekne kaçamağı. İkisi de çok para harcamadan güzel hissettirsin diye hazırlandı.</p>
+<div class="hero-actions"><a class="btn primary" href="#options">İki seçeneği gör</a><a class="btn secondary" href="#choose">Karar vermeme yardım et</a></div>
+</div>
+<div aria-label="Italy travel photos" class="polaroids">
+<div class="photo p1"><img alt="Gün batımında İtalyan ada kıyısı" src="images/hero-island-coastline.jpg"/></div>
+<div class="photo p2"><img alt="Mavi Akdeniz suyu" src="images/hero-blue-mediterranean.jpg"/></div>
+<div class="photo p3"><img alt="Romantik İtalyan sahil kasabası" src="images/hero-romantic-seaside-town.jpg"/></div>
+<div class="sticker"><small>Bütçe hedefi</small>Kişi başı €450–€500</div>
+</div>
+</div>
+</header>
+<section id="options">
+<div class="wrap">
+<div class="section-kicker">Kısa liste</div>
+<h2 class="section-title">Sadece iki seçenek. İkisi de rüya gibi.</h2>
+<p class="lead">Puglia’yı çıkardım; sevgiliye sürpriz için en romantik, en denizli ve en özel hissettiren iki rotayı bıraktım.</p>
+<div class="two-choice">
+<article class="choice">
+<img alt="Ischia ada kıyısı" src="images/option-ischia-island.jpg"/>
+<div class="choice-content">
+<div class="rating">Seçenek A · Ada tatili</div>
+<h3>Ischia</h3>
+<div class="pillrow"><span class="pill">Forio’da konaklama</span><span class="pill">Citara Plajı</span><span class="pill">Sant’Angelo</span><span class="pill">Sıcak su kaynakları</span></div>
+<div class="price">€430–€500 pp</div>
+<p>Gerçek tatil hissi için en iyisi: ada otobüsleri, gün batımı yüzmeleri, büyük plajlar ve doğal sıcak su kaynakları.</p>
+</div>
+</article>
+<article class="choice">
+<img alt="Sicily coastline and old town" src="images/option-east-sicily-ortigia.jpg"/>
+<div class="choice-content">
+<div class="rating">Seçenek B · Romantik macera</div>
+<h3>Doğu Sicilya</h3>
+<div class="pillrow"><span class="pill">Ortigia’da konaklama</span><span class="pill">Deniz mağaraları</span><span class="pill">Tekne turu</span><span class="pill">Fontane Bianche</span></div>
+<div class="price">€350–€470 pp</div>
+<p>Romantizm + çeşitlilik için en iyisi: yürüyerek gezilen akşamlar, tekneyle mağaralar, gerçek plaj günü ve kolay havalimanı transferi.</p>
+</div>
+</article>
+</div>
+<div class="comparison">
+<div class="stat"><b>3 gece</b><span>Gerçek bir mini tatil gibi hissetmeye yetecek kadar zaman.</span></div>
+<div class="stat"><b>4 gün</b><span>Varış günü yüzme, bir macera günü, bir gerçek plaj günü, rahat bir son sabah.</span></div>
+<div class="stat"><b>€450–€500</b><span>Uçak hariç kişi başı hedef; sade yemekler ve uygun odalarla mümkün.</span></div>
+<div class="stat"><b>Araba yok</b><span>Feribot, otobüs, tren, yürüyüş ve az sayıda taksi üzerine planlandı.</span></div>
+</div>
+</div>
+</section>
+<section id="ischia">
+<div class="wrap trip">
+<div class="trip-hero">
+<div class="trip-cover"><img alt="Ischia coast" src="images/ischia-cover.jpg"/></div>
+<div class="trip-copy">
+<div class="section-kicker">Seçenek A</div>
+<h2>Ischia: ada, plajlar ve sıcak su kaynakları</h2>
+<p>Konaklama yeri: <b>Forio</b>, adanın daha bütçe dostu tarafı; gün batımları güzel ve Citara’ya ulaşım kolay. Bu seçenek en çok “gerçekten tatile geldik” hissi veriyor: plaj sabahları, romantik köy manzaraları, su taksisi havasında bir gün ve unutulmaz sıcak su finali.</p>
+<div class="budget-card">
+<h4>Kişi başı bütçe hedefi</h4>
+<div class="budget-grid">
+<div class="budget-line"><span>Forio’da 3 gece oda paylaşımı</span><b>€150–€210</b></div>
+<div class="budget-line"><span>Napoli ⇄ Ischia feribotları</span><b>€35–€50</b></div>
+<div class="budget-line"><span>Ada otobüsleri / az taksi</span><b>€25–€45</b></div>
+<div class="budget-line"><span>Yemek, gelato, basit içecekler</span><b>€120–€150</b></div>
+<div class="budget-line"><span>Plajlar / ekstra harcamalar</span><b>€20–€45</b></div>
+<div class="budget-line"><span>Opsiyonel Poseidon termal parkı</span><b>+€45–€50</b></div>
+</div>
+<div class="budget-total"><span>Toplam</span><span>€430–€500</span></div>
+<div class="note">€500 altında kalmak için Poseidon ya da daha güzel bir akşam yemeğinden birini seçelim, ikisini birden değil. Uçak biletleri çok değiştiği için dahil değil.</div>
+</div>
+</div>
+</div>
+<div class="timeline">
+<div class="day"><div class="day-num"><strong>1</strong>Varış</div><div><h4>Napoli → Ischia feribotu → Forio’da gün batımı yüzmesi</h4><p>Napoli’ye varış, limana geçiş, feribot veya hızlı tekneyle Ischia’ya geçiş, sonra Forio’ya yerleşme. Zaman kalırsa Citara Plajı’nda ya da Chiaia tarafında kolay bir yüzme, ardından deniz kenarında akşam yemeği.</p><div class="mini-tags"><span class="mini">Gün batımı</span><span class="mini">Rahat başlangıç</span><span class="mini">İlk yüzme</span></div></div><div class="day-photo"><img alt="Gün batımında Forio ve Ischia kıyısı" src="images/ischia-day1-forio-sunset.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>2</strong>Plaj</div><div><h4>Citara Plajı + opsiyonel Poseidon Termal Bahçeleri</h4><p>Yüzmeli, şezlonglu ve rahat bir plaj günü. Kendimize küçük bir ödül vermek istersek termal havuzlar ve deniz erişimi için Poseidon’u ekleriz; bütçeyi düşük tutmak istersek pas geçeriz.</p><div class="mini-tags"><span class="mini">Citara</span><span class="mini">Termal havuzlar</span><span class="mini">Rahat</span></div></div><div class="day-photo"><img alt="Ischia’daki Citara Plajı" src="images/ischia-day2-citara-beach.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>3</strong>En güzel gün</div><div><h4>Sant’Angelo + Maronti Plajı</h4><p>Güne sevimli ve yayalaştırılmış gibi hissettiren Sant’Angelo köyüyle başlarız, sonra günün sıcak kısmını Maronti Plajı’nda geçiririz. Çalışıyorsa su taksisiyle geçmek günü daha özel hissettirir.</p><div class="mini-tags"><span class="mini">Romantik köy</span><span class="mini">Büyük plaj</span><span class="mini">Su taksisi</span></div></div><div class="day-photo"><img alt="Ischia’da Sant’Angelo ve Maronti Plajı" src="images/ischia-day3-santangelo-maronti.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>4</strong>Final</div><div><h4>Sorgeto sıcak suları ya da son Citara yüzmesi</h4><p>Deniz kenarında kayalık sıcak su havuzları için Sorgeto’yu seçeriz ya da dönüş feribotundan önce Forio yakınlarında son bir yüzmeyle sabahı rahat tutarız.</p><div class="mini-tags"><span class="mini">Sorgeto</span><span class="mini">Son yüzme</span><span class="mini">Kolay dönüş</span></div></div><div class="day-photo"><img alt="Son yüzme günü için Ischia kıyısı" src="images/ischia-day4-final-island-swim.jpg"/></div></div>
+<div class="gallery">
+<img alt="Ischia ada fotoğrafı" src="images/ischia-day1-forio-sunset.jpg"/>
+<img alt="Ischia plaj fotoğrafı" src="images/ischia-day2-citara-beach.jpg"/>
+<img alt="Deniz sıcak suları fotoğrafı" src="images/ischia-day4-final-island-swim.jpg"/>
+<img alt="İtalyan adasında gün batımı fotoğrafı" src="images/ischia-day3-santangelo-maronti.jpg"/>
+<img alt="Akdeniz plaj fotoğrafı" src="images/ischia-day4-final-island-swim.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<section id="sicily">
+<div class="wrap trip">
+<div class="trip-hero">
+<div class="trip-cover"><img alt="Ortigia Siraküza kıyısı" src="images/sicily-cover.jpg"/></div>
+<div class="trip-copy">
+<div class="section-kicker">Seçenek B</div>
+<h2>Doğu Sicilya: Ortigia, deniz mağaraları ve plaj günü</h2>
+<p>Konaklama yeri: <b>Ortigia / Siraküza</b>. Bu seçenek bütçe açısından daha rahat: romantik akşamlar, deniz mağaraları ve yüzme noktaları çevresinde tekne turu, sonra Fontane Bianche veya Arenella’da kumlu plaj günü.</p>
+<div class="budget-card">
+<h4>Kişi başı bütçe hedefi</h4>
+<div class="budget-grid">
+<div class="budget-line"><span>Siraküza’da 3 gece oda paylaşımı</span><b>€135–€195</b></div>
+<div class="budget-line"><span>Katanya havalimanı ⇄ Siraküza</span><b>€12–€35</b></div>
+<div class="budget-line"><span>Ortigia deniz mağaraları tekne turu</span><b>€25–€40</b></div>
+<div class="budget-line"><span>Plaj transferi / otobüsler / paylaşımlı taksi</span><b>€25–€50</b></div>
+<div class="budget-line"><span>Yemek, gelato, basit içecekler</span><b>€120–€150</b></div>
+<div class="budget-line"><span>Plaj ekstra / yedek bütçe</span><b>€30–€50</b></div>
+</div>
+<div class="budget-total"><span>Toplam</span><span>€350–€470</span></div>
+<div class="note">Bu seçenek uçak biletleri veya daha güzel bir akşam yemeği için daha fazla pay bırakır. Bütçe için Ortigia içi pahalıysa hemen dışında kalmak daha mantıklı.</div>
+</div>
+</div>
+</div>
+<div class="timeline">
+<div class="day"><div class="day-num"><strong>1</strong>Varış</div><div><h4>Katanya → Ortigia + deniz kenarı akşamı</h4><p>Katanya’ya uçuş, Siraküza’ya transfer, otele yerleşme ve Ortigia’da gezme. Erken varırsak kayalık yüzme platformlarından denize gireriz; sonra gün batımı, akşam yemeği ve gelato.</p><div class="mini-tags"><span class="mini">Ortigia</span><span class="mini">Yürüyerek gezilir</span><span class="mini">Romantik akşam yemeği</span></div></div><div class="day-photo"><img alt="Siraküza Sicilya’da Ortigia kıyısı" src="images/sicily-day1-ortigia-arrival.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>2</strong>Tekne</div><div><h4>Deniz mağaraları + Plemmirio tarzı yüzme molaları</h4><p>Ortigia manzaraları, deniz mağaraları, kıyıda yüzme ve arabasız macera hissi için sabah ya da gün batımı tekne turu ayarlarız.</p><div class="mini-tags"><span class="mini">Tekne turu</span><span class="mini">Deniz mağaraları</span><span class="mini">Yüzme molaları</span></div></div><div class="day-photo"><img alt="Plemmirio kayalık kıyısı ve deniz mağaraları" src="images/sicily-day2-plemmirio-sea-caves.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>3</strong>Plaj</div><div><h4>Fontane Bianche veya Arenella</h4><p>Gerçek kumlu plaj günümüz. Erken gideriz, basit tutarız, yüzeriz, dinleniriz ve son gece güzel bir yemek için Ortigia’ya döneriz.</p><div class="mini-tags"><span class="mini">Kumlu plaj</span><span class="mini">Berrak su</span><span class="mini">Kolay gün</span></div></div><div class="day-photo"><img alt="Sicilya’da Fontane Bianche Plajı" src="images/sicily-day3-fontane-bianche-beach.jpg"/></div></div>
+<div class="day"><div class="day-num"><strong>4</strong>Final</div><div><h4>Son yüzme ya da havalimanından önce Aci Trezza</h4><p>Uçuş erkense kahvaltı ve son Ortigia deniz manzarasıyla basit tutarız. Uçuş geçse Katanya yakınında volkanik kayalık kıyılar için Aci Trezza / Aci Castello eklenebilir.</p><div class="mini-tags"><span class="mini">Aci Trezza</span><span class="mini">Volkanik kıyı</span><span class="mini">Havalimanı günü</span></div></div><div class="day-photo"><img alt="Sicilya’da Aci Trezza volkanik kıyısı" src="images/sicily-day4-aci-trezza-coast.jpg"/></div></div>
+<div class="gallery">
+<img alt="Ortigia Sicilya fotoğrafı" src="images/sicily-day1-ortigia-arrival.jpg"/>
+<img alt="Sicilya deniz mağaraları fotoğrafı" src="images/sicily-day2-plemmirio-sea-caves.jpg"/>
+<img alt="Fontane Bianche fotoğrafı" src="images/sicily-day3-fontane-bianche-beach.jpg"/>
+<img alt="Sicilya tekne turu fotoğrafı" src="images/sicily-day2-plemmirio-sea-caves.jpg"/>
+<img alt="Aci Trezza fotoğrafı" src="images/sicily-day4-aci-trezza-coast.jpg"/>
+</div>
+</div>
+</div>
+</section>
+<section id="choose">
+<div class="wrap decision">
+<div>
+<div class="section-kicker">Karar zamanı</div>
+<h2 class="section-title">Benim dürüst seçimim</h2>
+<p class="lead"><b>En romantik “ada tatili” hissini istiyorsak:</b> Ischia’yı seçelim. <br/><br/><b>En güvenli bütçe ve en kolay lojistik istiyorsak:</b> Doğu Sicilya’yı seçelim.</p>
+</div>
+<div class="winner">
+<h3>En iyi sürpriz seçimi: Ischia 💛</h3>
+<p>Daha çok gizli bir kaçamak gibi hissettiriyor: feribotla varış, Forio gün batımları, Sant’Angelo, Maronti Plajı ve Sorgeto sıcak suları. Bütçeyi korumak için yemekleri sade tutarız ve sadece bir ücretli “kendimizi şımartma” aktivitesi yaparız.</p>
+<a class="btn primary" href="#ischia">Beni Ischia’ya götür</a>
+</div>
+<div class="winner">
+<h3>En iyi bütçe seçimi: Doğu Sicilya 🌊</h3>
+<p>Yine güzel ve romantik, ama daha ucuz ve daha kolay. Ortigia akşamları + tekne turu + gerçek bir plaj günü, sadece dört güne çok fazla çeşitlilik sığdırıyor.</p>
+<a class="btn secondary" href="#sicily">Bana Sicilya’yı göster</a>
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="heart">♥</div>
+<p>Sürpriz olarak hazırlandı. İki seçenek. Üç gece. Dört gün. Bol bol deniz.</p>
+<p><small>Bütçe tahminleri uçak hariç kişi başıdır; rezervasyon tarihlerine, oda fırsatlarına ve ücretli ekstra seçip seçmememize göre değişir.</small></p>
+</footer>
+<script>
+  const c = document.getElementById('confetti');
+  for(let i=0;i<70;i++){
+    const s=document.createElement('i');
+    s.style.left=Math.random()*100+'%'; s.style.animationDuration=(4+Math.random()*5)+'s'; s.style.animationDelay=(Math.random()*3)+'s'; s.style.opacity=.35+Math.random()*.65; c.appendChild(s);
+  }
+</script>
+</body>
+</html>
